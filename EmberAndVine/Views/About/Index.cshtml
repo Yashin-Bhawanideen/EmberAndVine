@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "Our story";
+}
+
+<section class="page-head">
+    <div class="wrap">
+        <h1>Our story</h1>
+        <p class="lead">Ember &amp; Vine started as a backyard braai and a stubborn idea: that good food needs time, smoke and generosity.</p>
+    </div>
+</section>
+
+<section class="section tight">
+    <div class="wrap split">
+        <div class="split-art"><img src="~/images/dishes/lamb.svg" alt="Rack of lamb" width="520" height="520" loading="lazy" /></div>
+        <div>
+            <h2>Chef Naledi Mokoena</h2>
+            <p>Naledi trained in Cape Town and Lyon before coming home to cook the way her family always did: over an open fire, with nothing hidden behind sauce.</p>
+            <p>Her kitchen is small on purpose. Every plate leaves the pass within a minute of coming off the heat, and every cut of meat is butchered in-house.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-wine">
+    <div class="wrap">
+        <div class="section-head"><h2>What we cook by</h2></div>
+        <div class="grid-3 values">
+            <div><h3>Vine wood only</h3><p class="muted">Pruned vines from local estates give a sweet, clean smoke. Nothing is cooked on gas.</p></div>
+            <div><h3>Short supply lines</h3><p class="muted">Three growers, two farms and one fishing co-op. We know everyone who supplies us by name.</p></div>
+            <div><h3>Nothing wasted</h3><p class="muted">Bones become stock, trimmings become staff meal and peels go to the garden compost.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap visit">
+        <div>
+            <h2>Visit us</h2>
+            <p>214 Vine Lane, Brooklyn, Pretoria, 0181<br />012 555 0142<br />hello@@emberandvine.example</p>
+            <p class="muted">Free parking in the courtyard. Wheelchair accessible.</p>
+        </div>
+        <div>
+            <h3>Hours</h3>
+            <ul class="plain hours">
+                <li><span>Tuesday to Thursday</span> 17:00 to 22:00</li>
+                <li><span>Friday and Saturday</span> 12:00 to 23:00</li>
+                <li><span>Sunday lunch</span> 12:00 to 16:00</li>
+                <li><span>Monday</span> Closed</li>
+            </ul>
+            <a class="btn btn-ember" asp-controller="Reservations" asp-action="Create">Book a table</a>
+        </div>
+    </div>
+</section>

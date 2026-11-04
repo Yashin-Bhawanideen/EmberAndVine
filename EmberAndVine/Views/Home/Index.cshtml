@@ -1,0 +1,81 @@
+@model List<MenuItem>
+@{
+    ViewData["Title"] = "Wood-fire dining in Pretoria";
+}
+
+<section class="hero">
+    <div class="wrap hero-grid">
+        <div class="hero-copy">
+            <p class="kicker">Wood-fire restaurant, Brooklyn</p>
+            <h1>Cooked over open fire.<br />Served without hurry.</h1>
+            <p class="lead">Dry-aged beef, line-caught fish and whatever the garden gave us this week, all finished over vine wood and coals.</p>
+            <div class="hero-cta">
+                <a class="btn btn-ember" asp-controller="Reservations" asp-action="Create">Reserve a table</a>
+                <a class="btn btn-ghost" asp-controller="Menu" asp-action="Index">See the menu</a>
+            </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+            <div class="glow"></div>
+            <img src="~/images/hero-plate.svg" alt="" width="640" height="640" />
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap split">
+        <div class="split-art">
+            <img src="~/images/dishes/ribeye.svg" alt="Dry-aged ribeye with bone-marrow butter" width="520" height="520" loading="lazy" />
+        </div>
+        <div>
+            <h2>One fire, no shortcuts</h2>
+            <p>Everything on our menu touches the fire. We burn vine prunings from nearby wine farms, which gives the meat a sweet, mellow smoke that gas and charcoal simply can't.</p>
+            <p>Our beef hangs for thirty days. Our fish arrives whole. Our vegetables come from three growers within an hour of the kitchen. The menu changes when they do.</p>
+            <a class="text-link" asp-controller="About" asp-action="Index">Read our story</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-wine">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>The dishes people book for</h2>
+            <p class="muted">Three plates that have stayed on the menu since opening night.</p>
+        </div>
+        <div class="grid-3">
+            @foreach (var item in Model)
+            {
+                <article class="card-dish">
+                    <img src="~/images/dishes/@item.Image" alt="@item.Name" width="400" height="400" loading="lazy" />
+                    <div class="card-body">
+                        <div class="dish-top"><h3>@item.Name</h3><span class="price">@($"R{item.Price:0}")</span></div>
+                        <p class="muted">@item.Description</p>
+                    </div>
+                </article>
+            }
+        </div>
+        <p class="center"><a class="btn btn-ghost" asp-controller="Menu" asp-action="Index">Full menu</a></p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap quotes">
+        <figure>
+            <blockquote>The ribeye is the best I've had in Gauteng, and the fondant is dangerous. We booked again before we left.</blockquote>
+            <figcaption>Thandi M., Sunday lunch</figcaption>
+        </figure>
+        <figure>
+            <blockquote>Warm, unhurried and properly cooked. The kingklip was perfect and the staff remembered our anniversary.</blockquote>
+            <figcaption>Pieter and Annelie, Friday dinner</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="wrap cta-inner">
+        <div>
+            <h2>Tables fill fast on Fridays</h2>
+            <p>Reserve online in under a minute. For groups over twelve, call 012 555 0142.</p>
+        </div>
+        <a class="btn btn-dark" asp-controller="Reservations" asp-action="Create">Reserve a table</a>
+    </div>
+</section>

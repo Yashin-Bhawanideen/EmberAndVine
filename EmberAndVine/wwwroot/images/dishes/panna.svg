@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="78%"><stop offset="0" stop-color="#3d1d33"/><stop offset="1" stop-color="#1b0d17"/></radialGradient>
+    <radialGradient id="pl" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#d8ccb9"/></radialGradient>
+    <radialGradient id="shine" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="312" r="236" fill="#000" opacity=".25"/>
+  <circle cx="300" cy="300" r="236" fill="url(#pl)"/>
+  <circle cx="300" cy="300" r="190" fill="none" stroke="#cdbfa9" stroke-width="3"/>
+  <circle cx="300" cy="300" r="176" fill="#f6eee1" opacity=".75"/>
+  <path d="M215 360 L240 245 C260 225 340 225 360 245 L385 360 C385 378 215 378 215 360Z" fill="#fbf4e1"/>
+  <path d="M215 360 L240 245 C260 225 340 225 360 245 L385 360 C385 378 215 378 215 360Z" fill="url(#shine)"/>
+  <path d="M240 245 C260 225 340 225 360 245 C345 285 275 285 240 245Z" fill="#a82a45" opacity=".9"/>
+  <circle cx="280" cy="240" r="15" fill="#7a1d4a"/><circle cx="276" cy="236" r="4" fill="#fff" opacity=".5"/><circle cx="318" cy="236" r="15" fill="#b3202f"/><circle cx="314" cy="232" r="4" fill="#fff" opacity=".5"/><circle cx="300" cy="222" r="15" fill="#3b2a7a"/><circle cx="296" cy="218" r="4" fill="#fff" opacity=".5"/>
+  <circle cx="440" cy="310" r="6" fill="#87a84a"/><circle cx="458" cy="325" r="5" fill="#87a84a"/><circle cx="430" cy="332" r="5" fill="#a3c05a"/><circle cx="150" cy="330" r="6" fill="#87a84a"/>
+  <path d="M130 410 C230 462 390 462 470 405" stroke="#a82a45" stroke-width="14" stroke-linecap="round" fill="none" opacity=".8"/>
+  <ellipse cx="300" cy="205" rx="13" ry="7" transform="rotate(0 300 205)" fill="#4f8a3a"/><ellipse cx="282" cy="210" rx="13" ry="7" transform="rotate(-40 282 210)" fill="#4f8a3a"/>
+</svg>

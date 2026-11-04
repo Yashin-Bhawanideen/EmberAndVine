@@ -1,0 +1,56 @@
+@model IReadOnlyList<MenuItem>
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<section class="page-head">
+    <div class="wrap">
+        <h1>The menu</h1>
+        <p class="lead">Seasonal and fire-cooked. Please tell us about allergies when you book or order.</p>
+        <nav class="chips" aria-label="Menu sections">
+            @foreach (var c in MenuData.Categories)
+            {
+                <a href="#@c.ToLower()">@c</a>
+            }
+        </nav>
+    </div>
+</section>
+
+<div class="wrap menu-wrap">
+    @foreach (var category in MenuData.Categories)
+    {
+        <section id="@category.ToLower()" class="menu-section">
+            <h2>@category</h2>
+            <div class="dish-list">
+                @foreach (var item in Model.Where(i => i.Category == category))
+                {
+                    <article class="dish">
+                        <img src="~/images/dishes/@item.Image" alt="@item.Name" width="160" height="160" loading="lazy" />
+                        <div>
+                            <div class="dish-top">
+                                <h3>@item.Name</h3>
+                                <span class="price">@($"R{item.Price:0}")</span>
+                            </div>
+                            <p class="muted">@item.Description</p>
+                            @if (item.Tag is not null)
+                            {
+                                <span class="tag">@item.Tag</span>
+                            }
+                        </div>
+                    </article>
+                }
+            </div>
+        </section>
+    }
+    <p class="muted fine">A 10% service charge is added for tables of eight or more. Prices include VAT.</p>
+</div>
+
+<section class="cta-band">
+    <div class="wrap cta-inner">
+        <div>
+            <h2>Hungry already?</h2>
+            <p>Book your table and we'll have the fire ready.</p>
+        </div>
+        <a class="btn btn-dark" asp-controller="Reservations" asp-action="Create">Reserve a table</a>
+    </div>
+</section>

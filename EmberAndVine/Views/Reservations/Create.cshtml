@@ -1,0 +1,76 @@
+@model Reservation
+@{
+    ViewData["Title"] = "Reserve a table";
+    var slots = new[] { "12:00", "12:30", "13:00", "13:30", "14:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00" };
+}
+
+<section class="page-head">
+    <div class="wrap">
+        <h1>Reserve a table</h1>
+        <p class="lead">Tell us when and how many. We'll email you to confirm.</p>
+    </div>
+</section>
+
+<section class="wrap form-wrap">
+    <form asp-action="Create" method="post" class="form-card" novalidate>
+        <div asp-validation-summary="ModelOnly" class="alert"></div>
+
+        <div class="row">
+            <div class="field">
+                <label asp-for="FullName"></label>
+                <input asp-for="FullName" autocomplete="name" />
+                <span asp-validation-for="FullName" class="err"></span>
+            </div>
+            <div class="field">
+                <label asp-for="Phone"></label>
+                <input asp-for="Phone" type="tel" autocomplete="tel" />
+                <span asp-validation-for="Phone" class="err"></span>
+            </div>
+        </div>
+
+        <div class="field">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" type="email" autocomplete="email" />
+            <span asp-validation-for="Email" class="err"></span>
+        </div>
+
+        <div class="row three">
+            <div class="field">
+                <label for="Date">Date</label>
+                <input id="Date" name="Date" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" min="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="Date" class="err"></span>
+            </div>
+            <div class="field">
+                <label asp-for="TimeSlot"></label>
+                <select asp-for="TimeSlot">
+                    @foreach (var s in slots)
+                    {
+                        <option value="@s" selected="@(s == Model.TimeSlot)">@s</option>
+                    }
+                </select>
+            </div>
+            <div class="field">
+                <label asp-for="Guests"></label>
+                <input asp-for="Guests" type="number" min="1" max="12" />
+                <span asp-validation-for="Guests" class="err"></span>
+            </div>
+        </div>
+
+        <div class="field">
+            <label asp-for="SpecialRequests"></label>
+            <textarea asp-for="SpecialRequests" rows="4" placeholder="Allergies, celebrations, high chair, window table"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-ember wide">Request this table</button>
+    </form>
+
+    <aside class="aside-card">
+        <h3>Good to know</h3>
+        <ul class="plain">
+            <li>We hold tables for 15 minutes.</li>
+            <li>Friday and Saturday dinner books out two weeks ahead.</li>
+            <li>For groups over 12, call 012 555 0142.</li>
+            <li>Vegetarian dishes are marked on the menu.</li>
+        </ul>
+    </aside>
+</section>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="78%"><stop offset="0" stop-color="#173a3a"/><stop offset="1" stop-color="#0b1c1d"/></radialGradient>
+    <radialGradient id="pl" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#d8ccb9"/></radialGradient>
+    <radialGradient id="shine" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="312" r="236" fill="#000" opacity=".25"/>
+  <circle cx="300" cy="300" r="236" fill="url(#pl)"/>
+  <circle cx="300" cy="300" r="190" fill="none" stroke="#cdbfa9" stroke-width="3"/>
+  <circle cx="300" cy="300" r="176" fill="#f6eee1" opacity=".75"/>
+  <path d="M165 305 C215 225 345 215 435 268 C462 285 456 332 425 348 C332 392 218 378 165 305Z" fill="#e9b08c"/>
+  <path d="M165 305 C215 225 345 215 435 268 C462 285 456 332 425 348 C332 392 218 378 165 305Z" fill="url(#shine)"/>
+  <path d="M225 270 C245 300 240 340 222 365" stroke="#c98558" stroke-width="5" fill="none" opacity=".6"/><path d="M263 266 C283 300 278 340 260 365" stroke="#c98558" stroke-width="5" fill="none" opacity=".6"/><path d="M301 262 C321 300 316 340 298 365" stroke="#c98558" stroke-width="5" fill="none" opacity=".6"/><path d="M339 266 C359 300 354 340 336 365" stroke="#c98558" stroke-width="5" fill="none" opacity=".6"/><path d="M377 270 C397 300 392 340 374 365" stroke="#c98558" stroke-width="5" fill="none" opacity=".6"/>
+  <path d="M130 420 C220 470 380 470 470 405" stroke="#f1c24a" stroke-width="22" stroke-linecap="round" fill="none" opacity=".85"/>
+  <circle cx="455" cy="205" r="34" fill="#f3d35a"/><circle cx="455" cy="205" r="27" fill="#fbe98c"/>
+  <line x1="455" y1="205" x2="482.0" y2="205.0" stroke="#f3d35a" stroke-width="2"/><line x1="455" y1="205" x2="468.5" y2="228.4" stroke="#f3d35a" stroke-width="2"/><line x1="455" y1="205" x2="441.5" y2="228.4" stroke="#f3d35a" stroke-width="2"/><line x1="455" y1="205" x2="428.0" y2="205.0" stroke="#f3d35a" stroke-width="2"/><line x1="455" y1="205" x2="441.5" y2="181.6" stroke="#f3d35a" stroke-width="2"/><line x1="455" y1="205" x2="468.5" y2="181.6" stroke="#f3d35a" stroke-width="2"/>
+  <ellipse cx="210" cy="420" rx="13" ry="7" transform="rotate(10 210 420)" fill="#5e8a3c"/><ellipse cx="250" cy="432" rx="13" ry="7" transform="rotate(-20 250 432)" fill="#5e8a3c"/><ellipse cx="145" cy="330" rx="13" ry="7" transform="rotate(60 145 330)" fill="#5e8a3c"/><ellipse cx="160" cy="300" rx="13" ry="7" transform="rotate(-30 160 300)" fill="#5e8a3c"/>
+</svg>

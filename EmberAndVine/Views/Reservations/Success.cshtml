@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Request received";
+}
+
+<section class="page-head">
+    <div class="wrap narrow">
+        <h1>Thank you, @TempData["Name"]</h1>
+        <p class="lead">We've received your request for @TempData["Guests"] guest(s) on @TempData["When"]. A confirmation will land in your inbox shortly.</p>
+        <p><a class="btn btn-ember" asp-controller="Home" asp-action="Index">Back to the homepage</a> <a class="btn btn-ghost" asp-controller="Menu" asp-action="Index">Browse the menu</a></p>
+    </div>
+</section>

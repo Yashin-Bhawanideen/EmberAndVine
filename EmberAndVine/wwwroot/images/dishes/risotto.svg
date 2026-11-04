@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="78%"><stop offset="0" stop-color="#3a2e1a"/><stop offset="1" stop-color="#1a140a"/></radialGradient>
+    <radialGradient id="pl" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#d8ccb9"/></radialGradient>
+    <radialGradient id="shine" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="312" r="236" fill="#000" opacity=".25"/>
+  <circle cx="300" cy="300" r="236" fill="url(#pl)"/>
+  <circle cx="300" cy="300" r="190" fill="none" stroke="#cdbfa9" stroke-width="3"/>
+  <circle cx="300" cy="300" r="176" fill="#f6eee1" opacity=".75"/>
+  <ellipse cx="300" cy="325" rx="135" ry="105" fill="#e6d3a5"/><ellipse cx="300" cy="305" rx="125" ry="92" fill="#efe0b6"/><circle cx="200" cy="230" r="3" fill="#b88a52" opacity=".85"/><circle cx="253" cy="267" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="306" cy="304" r="5" fill="#7a5a34" opacity=".85"/><circle cx="359" cy="341" r="3" fill="#b88a52" opacity=".85"/><circle cx="212" cy="238" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="265" cy="275" r="5" fill="#7a5a34" opacity=".85"/><circle cx="318" cy="312" r="3" fill="#b88a52" opacity=".85"/><circle cx="371" cy="349" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="224" cy="246" r="5" fill="#7a5a34" opacity=".85"/><circle cx="277" cy="283" r="3" fill="#b88a52" opacity=".85"/><circle cx="330" cy="320" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="383" cy="357" r="5" fill="#7a5a34" opacity=".85"/><circle cx="236" cy="254" r="3" fill="#b88a52" opacity=".85"/><circle cx="289" cy="291" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="342" cy="328" r="5" fill="#7a5a34" opacity=".85"/><circle cx="395" cy="365" r="3" fill="#b88a52" opacity=".85"/><circle cx="248" cy="262" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="301" cy="299" r="5" fill="#7a5a34" opacity=".85"/><circle cx="354" cy="336" r="3" fill="#b88a52" opacity=".85"/><circle cx="207" cy="233" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="260" cy="270" r="5" fill="#7a5a34" opacity=".85"/><circle cx="313" cy="307" r="3" fill="#b88a52" opacity=".85"/><circle cx="366" cy="344" r="4" fill="#e8d9b8" opacity=".85"/><circle cx="219" cy="241" r="5" fill="#7a5a34" opacity=".85"/><circle cx="272" cy="278" r="3" fill="#b88a52" opacity=".85"/><circle cx="325" cy="315" r="4" fill="#e8d9b8" opacity=".85"/>
+  <ellipse cx="270" cy="290" rx="55" ry="26" fill="url(#shine)"/>
+  <circle cx="265" cy="300" r="22" fill="#8a6a45"/><circle cx="335" cy="320" r="25" fill="#7a5a38"/><circle cx="305" cy="270" r="18" fill="#9a7a52"/>
+  <ellipse cx="300" cy="345" rx="13" ry="7" transform="rotate(0 300 345)" fill="#4f8a3a"/><ellipse cx="255" cy="335" rx="13" ry="7" transform="rotate(40 255 335)" fill="#4f8a3a"/><ellipse cx="345" cy="285" rx="13" ry="7" transform="rotate(-40 345 285)" fill="#4f8a3a"/><ellipse cx="318" cy="350" rx="13" ry="7" transform="rotate(10 318 350)" fill="#4f8a3a"/>
+</svg>

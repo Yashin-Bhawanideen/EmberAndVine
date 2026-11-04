@@ -1,0 +1,70 @@
+@{
+    var current = ViewContext.RouteData.Values["controller"]?.ToString() ?? "Home";
+    string Active(string c) => string.Equals(current, c, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+    var isHome = current == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] | Ember &amp; Vine</title>
+    <meta name="description" content="Ember &amp; Vine is a wood-fire restaurant serving seasonal South African produce, dry-aged meat and slow-cooked seafood." />
+    <link rel="icon" href="~/images/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="@(isHome ? "is-home" : "")">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header" id="siteHeader">
+        <div class="wrap header-inner">
+            <a class="brand" asp-controller="Home" asp-action="Index" aria-label="Ember and Vine home">
+                <img src="~/images/logo.svg" alt="" width="34" height="34" />
+                <span>Ember <em>&amp;</em> Vine</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+                <span></span><span></span>
+            </button>
+            <nav id="mainNav" class="main-nav" aria-label="Main">
+                <a class="@Active("Home")" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="@Active("Menu")" asp-controller="Menu" asp-action="Index">Menu</a>
+                <a class="@Active("About")" asp-controller="About" asp-action="Index">Our story</a>
+                <a class="btn btn-ember @Active("Reservations")" asp-controller="Reservations" asp-action="Create">Book a table</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <div class="brand brand-foot"><img src="~/images/logo.svg" alt="" width="34" height="34" /><span>Ember <em>&amp;</em> Vine</span></div>
+                <p class="muted">Fire, smoke and seasonal produce.<br />Cooked slowly, served generously.</p>
+            </div>
+            <div>
+                <h4>Opening hours</h4>
+                <ul class="plain">
+                    <li><span>Tuesday to Thursday</span> 17:00 to 22:00</li>
+                    <li><span>Friday and Saturday</span> 12:00 to 23:00</li>
+                    <li><span>Sunday lunch</span> 12:00 to 16:00</li>
+                    <li><span>Monday</span> Closed</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Find us</h4>
+                <p class="muted">214 Vine Lane, Brooklyn<br />Pretoria, 0181<br />012 555 0142<br />hello@@emberandvine.example</p>
+            </div>
+        </div>
+        <div class="wrap foot-base">&copy; @DateTime.Now.Year Ember &amp; Vine. A demo restaurant website.</div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
