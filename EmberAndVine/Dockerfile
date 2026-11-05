@@ -1,7 +1,7 @@
 # This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
-EXPOSE 8081
+EXPOSE 10000
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
@@ -22,5 +22,6 @@ RUN dotnet publish "./EmberAndVine.csproj" -c $BUILD_CONFIGURATION -o /app/publi
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV ASPNETCORE_URLS=http://+:8081
-ENTRYPOINT ["dotnet", "EmberAndVine.dll"]
+
+# Bind to the port Render provides via $PORT (defaults to 10000)
+ENTRYPOINT ["sh", "-c", "ASPNETCORE_URLS=http://0.0.0.0:${PORT:-10000} exec dotnet EmberAndVine.dll"]
